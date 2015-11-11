@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="MusicCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="歌曲名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1g-bp-YeT">
+                        <rect key="frame" x="109" y="10" width="66" height="48"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashu.png" translatesAutoresizingMaskIntoConstraints="NO" id="iMj-Ni-1Ww">
+                        <rect key="frame" x="10" y="10" width="79" height="79"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="iMj-Ni-1Ww" secondAttribute="height" multiplier="1:1" id="lke-9z-dE3"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="歌手名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdd-Fb-CQs">
+                        <rect key="frame" x="109" y="68" width="51" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gdd-Fb-CQs" firstAttribute="bottom" secondItem="iMj-Ni-1Ww" secondAttribute="bottom" id="10W-vp-p4G"/>
+                    <constraint firstItem="W1g-bp-YeT" firstAttribute="leading" secondItem="iMj-Ni-1Ww" secondAttribute="trailing" constant="20" id="Eal-8y-oQx"/>
+                    <constraint firstItem="W1g-bp-YeT" firstAttribute="top" secondItem="iMj-Ni-1Ww" secondAttribute="top" id="HIp-Kr-AeG"/>
+                    <constraint firstItem="iMj-Ni-1Ww" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="VzE-P3-rGy"/>
+                    <constraint firstItem="gdd-Fb-CQs" firstAttribute="top" secondItem="W1g-bp-YeT" secondAttribute="bottom" constant="10" id="b5s-J4-OQi"/>
+                    <constraint firstItem="iMj-Ni-1Ww" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="cr2-CY-32Z"/>
+                    <constraint firstAttribute="bottom" secondItem="iMj-Ni-1Ww" secondAttribute="bottom" constant="10" id="fel-5D-hHf"/>
+                    <constraint firstItem="gdd-Fb-CQs" firstAttribute="leading" secondItem="iMj-Ni-1Ww" secondAttribute="trailing" constant="20" id="m86-Ys-fYz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="img" destination="iMj-Ni-1Ww" id="Ef6-Bi-aB2"/>
+                <outlet property="singerName" destination="gdd-Fb-CQs" id="wMY-V0-LrH"/>
+                <outlet property="songName" destination="W1g-bp-YeT" id="bZp-gr-42z"/>
+            </connections>
+            <point key="canvasLocation" x="340" y="461"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="dashu.png" width="1280" height="720"/>
+    </resources>
+</document>
