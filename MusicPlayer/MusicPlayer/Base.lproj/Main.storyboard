@@ -21,7 +21,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVH-YJ-3tQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-806" y="328"/>
+            <point key="canvasLocation" x="-1099" y="365"/>
         </scene>
         <!--音乐列表-->
         <scene sceneID="ZCl-Yy-j7n">
@@ -69,10 +69,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="playingButton" destination="a8Q-ec-Exp" id="PG6-aF-rrw"/>
+                        <outlet property="searchButton" destination="vyz-cZ-4fM" id="etr-8I-E0i"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFF-dB-210" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-662" y="291"/>
+            <point key="canvasLocation" x="-841" y="353"/>
         </scene>
         <!--Playing View Controller-->
         <scene sceneID="zWJ-mH-XWi">
@@ -353,7 +357,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKF-CI-mn5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-497" y="243"/>
+            <point key="canvasLocation" x="-821" y="327"/>
         </scene>
     </scenes>
     <resources>

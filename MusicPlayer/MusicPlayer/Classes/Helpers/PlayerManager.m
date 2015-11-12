@@ -23,10 +23,6 @@ static PlayerManager *playerManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         playerManager = [PlayerManager new];
-        AVAudioSession *session = [AVAudioSession sharedInstance];
-        [session setActive:YES error:nil];
-        [session setCategory:AVAudioSessionCategoryPlayback error:nil];
-
     });
     return playerManager;
 }
@@ -60,6 +56,9 @@ static PlayerManager *playerManager = nil;
     [item addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
     // 替换当前正在播放的歌曲
     [self.player replaceCurrentItemWithPlayerItem:item];
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setActive:YES error:nil];
+    [session setCategory:AVAudioSessionCategoryPlayback error:nil];
 }
 -(void)play{
     // 如果正在播放的话，就播放了，直接返回就行了

@@ -21,6 +21,8 @@
 @property (nonatomic, retain) NSMutableArray *searchResult;
 // 搜索框
 @property (nonatomic, retain) UISearchController *searchController;
+@property (strong, nonatomic) IBOutlet UIButton *searchButton;
+@property (strong, nonatomic) IBOutlet UIButton *playingButton;
 
 
 @end
@@ -50,7 +52,9 @@ static NSString *identifier = @"cell";
     _searchController.searchResultsUpdater = self;
     [self.searchController setHidesNavigationBarDuringPresentation:NO];
     self.tableView.tableHeaderView = self.searchController.searchBar;
-    
+    self.navigationController.navigationBar.translucent = NO;
+    self.searchButton.hidden = YES;
+    self.playingButton.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,6 +71,8 @@ static NSString *identifier = @"cell";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if ([DataManager sharedManager].musicArray.count != 0) {
         [self.HUD hide:YES];
+        self.searchButton.hidden = NO;
+        self.playingButton.hidden = NO;
     }
     if (self.searchController.active == YES) {
         return self.searchResult.count;
