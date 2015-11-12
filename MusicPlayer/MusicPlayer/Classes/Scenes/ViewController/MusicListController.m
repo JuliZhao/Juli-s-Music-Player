@@ -12,7 +12,7 @@
 #import "MusicCell.h"
 #import "PlayingViewController.h"
 
-@interface MusicListController ()<MBProgressHUDDelegate, UISearchResultsUpdating>
+@interface MusicListController ()<MBProgressHUDDelegate, UISearchResultsUpdating,UISearchBarDelegate>
 // 小菊花
 @property (nonatomic, retain) MBProgressHUD *HUD;
 // 存放所有歌名的数组
@@ -22,24 +22,35 @@
 // 搜索框
 @property (nonatomic, retain) UISearchController *searchController;
 
+
 @end
 
 @implementation MusicListController
 
 static NSString *identifier = @"cell";
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView registerNib:[UINib nibWithNibName:@"MusicCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:identifier];
     [DataManager sharedManager].myUpdate = ^(){
         [self.tableView reloadData];
     };
+    
     self.HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    _HUD.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"dashu"]];
+    _HUD.backgroundColor = [UIColor redColor];
     _HUD.labelText = @"加载";
     _HUD.delegate = self;
     _HUD.detailsLabelText = @"努力加载中";
     _HUD.dimBackground = YES;
+    self.searchController = [[UISearchController alloc]initWithSearchResultsController:nil];
+    //        NSLog(@"%@", NSStringFromCGRect(self.searchController.searchBar.frame));
+    // 设置搜索框搜索到内容的背景颜色
+    _searchController.dimsBackgroundDuringPresentation = NO;
+    // 搜索时候更新
+    _searchController.searchBar.delegate = self;
+    _searchController.searchResultsUpdater = self;
+    [self.searchController setHidesNavigationBarDuringPresentation:NO];
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -96,16 +107,26 @@ static NSString *identifier = @"cell";
 }
 
 - (IBAction)searchBar:(UIButton *)sender {
-    self.searchController = [[UISearchController alloc]initWithSearchResultsController:nil];
-    NSLog(@"%@", NSStringFromCGRect(self.searchController.searchBar.frame));
-    // 设置搜索框搜索到内容的背景颜色
-    self.searchController.dimsBackgroundDuringPresentation = NO;
-    // 设为头视图
-    self.tableView.tableHeaderView = self.searchController.searchBar;
-    // 搜索时候更新
-    self.searchController.searchResultsUpdater = self;
+//    NSIndexPath *index = [NSIndexPath indexPathWithIndex:0];
+//    [self.tableView scrollToRowAtIndexPath:index atScrollPosition:(UITableViewScrollPositionTop) animated:YES];
+    NSIndexPath *index = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.tableView scrollToRowAtIndexPath:index atScrollPosition:UITableViewScrollPositionTop animated:NO];
+    
+    [self.navigationController.navigationBar setHidden:YES];
+    
+    [self.searchController.searchBar becomeFirstResponder];
 }
+
+- (void)scrollToRowAtIndexPath:(NSIndexPath *)indexPath atScrollPosition:(UITableViewScrollPosition)scrollPosition animated:(BOOL)animated{
+    
+}
+- (void)scrollToNearestSelectedRowAtScrollPosition:(UITableViewScrollPosition)scrollPosition animated:(BOOL)animated{
+    
+}
+
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
+    [self.searchController.searchBar resignFirstResponder];
+    [self.navigationController.navigationBar setHidden:NO];
 }
 #pragma mark --- UISearchResultsUpdating  必须实现
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController{

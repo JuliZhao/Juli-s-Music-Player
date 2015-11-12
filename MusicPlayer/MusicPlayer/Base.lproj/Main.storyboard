@@ -21,7 +21,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVH-YJ-3tQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1075" y="354"/>
+            <point key="canvasLocation" x="-806" y="328"/>
         </scene>
         <!--音乐列表-->
         <scene sceneID="ZCl-Yy-j7n">
@@ -72,7 +72,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFF-dB-210" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-517" y="293"/>
+            <point key="canvasLocation" x="-662" y="291"/>
         </scene>
         <!--Playing View Controller-->
         <scene sceneID="zWJ-mH-XWi">
@@ -108,7 +108,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mT7-ly-CMx">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="556"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashu.png" translatesAutoresizingMaskIntoConstraints="NO" id="dSg-W3-eEv">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SY.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="dSg-W3-eEv">
                                                         <rect key="frame" x="62" y="133" width="290" height="290"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="dSg-W3-eEv" secondAttribute="height" multiplier="1:1" id="FRs-rS-CSX"/>
@@ -152,21 +152,15 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="播放时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPA-eu-NkL">
                                         <rect key="frame" x="8" y="9" width="68" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="剩余时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGJ-S0-ZWb">
                                         <rect key="frame" x="338" y="9" width="68" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yxb-7v-pKE">
-                                        <rect key="frame" x="86" y="0.0" width="252" height="31"/>
-                                        <connections>
-                                            <action selector="action4ChangeTime:" destination="HXu-W7-OD2" eventType="valueChanged" id="frz-B6-Gjs"/>
-                                        </connections>
-                                    </slider>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dB-bX-PS4">
                                         <rect key="frame" x="344" y="68" width="32" height="32"/>
                                         <state key="normal" image="循环播放.png"/>
@@ -206,6 +200,12 @@
                                             <action selector="action4ChangeVolume:" destination="HXu-W7-OD2" eventType="valueChanged" id="FaJ-4l-fvA"/>
                                         </connections>
                                     </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yxb-7v-pKE">
+                                        <rect key="frame" x="86" y="0.0" width="252" height="31"/>
+                                        <connections>
+                                            <action selector="action4ChangeTime:" destination="HXu-W7-OD2" eventType="valueChanged" id="frz-B6-Gjs"/>
+                                        </connections>
+                                    </slider>
                                 </subviews>
                                 <color key="backgroundColor" red="0.83137254901960778" green="0.93725490196078431" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -243,13 +243,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="歌曲名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqR-mB-eba">
                                         <rect key="frame" x="173" y="20" width="69" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="歌手名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVn-ey-uc4">
                                         <rect key="frame" x="182" y="53" width="51" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4X-Ky-Eot">
@@ -357,7 +357,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dashu.png" width="1280" height="720"/>
+        <image name="SY.PNG" width="750" height="1334"/>
         <image name="上一首.png" width="32" height="32"/>
         <image name="下一首.png" width="32" height="32"/>
         <image name="列表页面.png" width="128" height="128"/>

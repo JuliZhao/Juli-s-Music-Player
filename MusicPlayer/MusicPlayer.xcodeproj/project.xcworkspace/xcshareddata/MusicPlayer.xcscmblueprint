@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "87EC6640CCBACEDADF81C7CE5C896C0DF61035D9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "3ae940f3-8410-4859-82cb-97a2b19ad8f4++3340" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "87EC6640CCBACEDADF81C7CE5C896C0DF61035D9" : 0,
+    "3ae940f3-8410-4859-82cb-97a2b19ad8f4++3340" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F485760B-F0A7-4E18-A4E7-A99283C26748",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "87EC6640CCBACEDADF81C7CE5C896C0DF61035D9" : "MyMusicPlayer\/",
+    "3ae940f3-8410-4859-82cb-97a2b19ad8f4++3340" : "MyMusicPlayer\/MusicPlayer\/MusicPlayer\/Classes\/Helpers\/MBProgressHUD\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MusicPlayer",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MusicPlayer\/MusicPlayer.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/60.28.29.48:8082\/svn",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3ae940f3-8410-4859-82cb-97a2b19ad8f4++3340"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/JuliZhao\/Juli-s-Music-Player.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "87EC6640CCBACEDADF81C7CE5C896C0DF61035D9"
+    }
+  ]
+}

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C24B08801BF3740700FFDA92 /* dashu.png in Resources */ = {isa = PBXBuildFile; fileRef = C24B087F1BF3740700FFDA92 /* dashu.png */; settings = {ASSET_TAGS = (); }; };
 		C299685A1BED8A720065E24F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C29968591BED8A720065E24F /* main.m */; };
 		C29968631BED8A720065E24F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29968611BED8A720065E24F /* Main.storyboard */; };
 		C29968651BED8A720065E24F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C29968641BED8A720065E24F /* Assets.xcassets */; };
@@ -35,7 +36,6 @@
 		C29968CB1BEDE38A0065E24F /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C29968B91BEDE38A0065E24F /* UIImageView+HighlightedWebCache.m */; };
 		C29968CC1BEDE38A0065E24F /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C29968BB1BEDE38A0065E24F /* UIImageView+WebCache.m */; };
 		C29968CD1BEDE38A0065E24F /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C29968BD1BEDE38A0065E24F /* UIView+WebCacheOperation.m */; };
-		C29B78531BF1E47000229BCB /* dashu.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B78491BF1E47000229BCB /* dashu.png */; settings = {ASSET_TAGS = (); }; };
 		C29B78541BF1E47000229BCB /* 上一首.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B784A1BF1E47000229BCB /* 上一首.png */; settings = {ASSET_TAGS = (); }; };
 		C29B78551BF1E47000229BCB /* 下一首.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B784B1BF1E47000229BCB /* 下一首.png */; settings = {ASSET_TAGS = (); }; };
 		C29B78561BF1E47000229BCB /* 列表页面.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B784C1BF1E47000229BCB /* 列表页面.png */; settings = {ASSET_TAGS = (); }; };
@@ -49,9 +49,11 @@
 		C29B78661BF22F2B00229BCB /* 搜索.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B78651BF22F2B00229BCB /* 搜索.png */; settings = {ASSET_TAGS = (); }; };
 		C2CBC41B1BF1808D000D317F /* LyricModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CBC41A1BF1808D000D317F /* LyricModel.m */; };
 		C2CBC41E1BF181CB000D317F /* LyricManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CBC41D1BF181CB000D317F /* LyricManager.m */; };
+		C2D09DFE1BF3350D008C00EF /* SY.PNG in Resources */ = {isa = PBXBuildFile; fileRef = C2D09DFD1BF3350D008C00EF /* SY.PNG */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C24B087F1BF3740700FFDA92 /* dashu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dashu.png; sourceTree = "<group>"; };
 		C29968551BED8A720065E24F /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29968591BED8A720065E24F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C29968621BED8A720065E24F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -108,7 +110,6 @@
 		C29968BB1BEDE38A0065E24F /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		C29968BC1BEDE38A0065E24F /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		C29968BD1BEDE38A0065E24F /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
-		C29B78491BF1E47000229BCB /* dashu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dashu.png; sourceTree = "<group>"; };
 		C29B784A1BF1E47000229BCB /* 上一首.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "上一首.png"; sourceTree = "<group>"; };
 		C29B784B1BF1E47000229BCB /* 下一首.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "下一首.png"; sourceTree = "<group>"; };
 		C29B784C1BF1E47000229BCB /* 列表页面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "列表页面.png"; sourceTree = "<group>"; };
@@ -125,6 +126,7 @@
 		C2CBC41A1BF1808D000D317F /* LyricModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyricModel.m; sourceTree = "<group>"; };
 		C2CBC41C1BF181CB000D317F /* LyricManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyricManager.h; sourceTree = "<group>"; };
 		C2CBC41D1BF181CB000D317F /* LyricManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyricManager.m; sourceTree = "<group>"; };
+		C2D09DFD1BF3350D008C00EF /* SY.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SY.PNG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,8 +355,9 @@
 		C29B78481BF1E47000229BCB /* Icon */ = {
 			isa = PBXGroup;
 			children = (
+				C24B087F1BF3740700FFDA92 /* dashu.png */,
+				C2D09DFD1BF3350D008C00EF /* SY.PNG */,
 				C29B78651BF22F2B00229BCB /* 搜索.png */,
-				C29B78491BF1E47000229BCB /* dashu.png */,
 				C29B784A1BF1E47000229BCB /* 上一首.png */,
 				C29B784B1BF1E47000229BCB /* 下一首.png */,
 				C29B784C1BF1E47000229BCB /* 列表页面.png */,
@@ -408,6 +411,7 @@
 				TargetAttributes = {
 					C29968541BED8A720065E24F = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = JQY7ZY844X;
 					};
 				};
 			};
@@ -435,10 +439,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C29B785B1BF1E47000229BCB /* 暂停.png in Resources */,
+				C24B08801BF3740700FFDA92 /* dashu.png in Resources */,
 				C29B78541BF1E47000229BCB /* 上一首.png in Resources */,
 				C29B78561BF1E47000229BCB /* 列表页面.png in Resources */,
 				C29968681BED8A720065E24F /* LaunchScreen.storyboard in Resources */,
 				C29B78581BF1E47000229BCB /* 循环播放.png in Resources */,
+				C2D09DFE1BF3350D008C00EF /* SY.PNG in Resources */,
 				C29B78661BF22F2B00229BCB /* 搜索.png in Resources */,
 				C29968651BED8A720065E24F /* Assets.xcassets in Resources */,
 				C29B785A1BF1E47000229BCB /* 播放页面.png in Resources */,
@@ -446,7 +452,6 @@
 				C29968631BED8A720065E24F /* Main.storyboard in Resources */,
 				C29B785C1BF1E47000229BCB /* 随机播放.png in Resources */,
 				C29B78551BF1E47000229BCB /* 下一首.png in Resources */,
-				C29B78531BF1E47000229BCB /* dashu.png in Resources */,
 				C299688D1BEDA6720065E24F /* MusicCell.xib in Resources */,
 				C29B78591BF1E47000229BCB /* 播放.png in Resources */,
 			);
@@ -595,6 +600,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = MusicPlayer/Music_pch.pch;
 				INFOPLIST_FILE = MusicPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -608,6 +614,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = MusicPlayer/Music_pch.pch;
 				INFOPLIST_FILE = MusicPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

@@ -23,6 +23,10 @@ static PlayerManager *playerManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         playerManager = [PlayerManager new];
+        AVAudioSession *session = [AVAudioSession sharedInstance];
+        [session setActive:YES error:nil];
+        [session setCategory:AVAudioSessionCategoryPlayback error:nil];
+
     });
     return playerManager;
 }
@@ -41,9 +45,6 @@ static PlayerManager *playerManager = nil;
         // 接收到item播放结束后，让代理去干一些事情，代理会怎么干，播放器不需要知道
         [self.delegate playerDidPlayEnd];
     }
-}
--(void)playerPlayingWithTime:(NSTimeInterval)time{
-    
 }
 
 -(void)playWithUrlString:(NSString *)urlStr{

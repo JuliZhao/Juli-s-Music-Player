@@ -33,35 +33,39 @@ static LyricManager *lyricManager = nil;
     // 解决方案一：
     // 移除最后一个元素（他是空的）
     [lyricStrArray removeLastObject];
-    
     // 要先移除之前歌曲的歌词
     [self.lyrics removeAllObjects];
     
-    for (NSString *str in lyricStrArray) {
-        // 解决方案二：
-//        // 判断是不是空的
-//        if ([str isEqualToString:@""]) {
-//            continue;
-//        }
-        
-        // 2.分开时间和歌词
-        NSArray *timeAndLyric = [str componentsSeparatedByString:@"]"];
-        if (timeAndLyric.count != 2) {
-            continue;
-        }
-        // 3.去掉时间左边的“[”
-        NSString *time = [timeAndLyric[0] substringFromIndex:1];
-        // 格式：time = 02:02.080
-        // 4.截取时间获取分和秒
-        NSArray *minuteAndSecond = [time componentsSeparatedByString:@":"];
-        // 分
-        NSInteger minute = [minuteAndSecond[0] integerValue];
-        // 秒
-        double second = [minuteAndSecond[1] doubleValue];
-        // 5.创建一个lyricModel
-        LyricModel *lyric = [[LyricModel alloc]initWithTime:(minute * 60 + second) lyric:timeAndLyric[1]];
-        // 6.添加到数组中
+    if (lyricStrArray.count == 0) {
+        LyricModel *lyric = [[LyricModel alloc]initWithTime:1 lyric:@"暂无歌词"];
         [self.lyrics addObject:lyric];
+    }else{
+        for (NSString *str in lyricStrArray) {
+            // 解决方案二：
+            //        // 判断是不是空的
+            //        if ([str isEqualToString:@""]) {
+            //            continue;
+            //        }
+            
+            // 2.分开时间和歌词
+            NSArray *timeAndLyric = [str componentsSeparatedByString:@"]"];
+            if (timeAndLyric.count != 2) {
+                continue;
+            }
+            // 3.去掉时间左边的“[”
+            NSString *time = [timeAndLyric[0] substringFromIndex:1];
+            // 格式：time = 02:02.080
+            // 4.截取时间获取分和秒
+            NSArray *minuteAndSecond = [time componentsSeparatedByString:@":"];
+            // 分
+            NSInteger minute = [minuteAndSecond[0] integerValue];
+            // 秒
+            double second = [minuteAndSecond[1] doubleValue];
+            // 5.创建一个lyricModel
+            LyricModel *lyric = [[LyricModel alloc]initWithTime:(minute * 60 + second) lyric:timeAndLyric[1]];
+            // 6.添加到数组中
+            [self.lyrics addObject:lyric];
+        }
     }
 }
 

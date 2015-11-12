@@ -19,7 +19,7 @@
                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashu.png" translatesAutoresizingMaskIntoConstraints="NO" id="iMj-Ni-1Ww">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SY.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="iMj-Ni-1Ww">
                         <rect key="frame" x="10" y="10" width="79" height="79"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="iMj-Ni-1Ww" secondAttribute="height" multiplier="1:1" id="lke-9z-dE3"/>
@@ -52,6 +52,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="dashu.png" width="1280" height="720"/>
+        <image name="SY.PNG" width="750" height="1334"/>
     </resources>
 </document>

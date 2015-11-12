@@ -15,7 +15,7 @@
 
 // 创建单例
 +(instancetype)sharedLyricManager;
-
+// 根据歌曲歌词的网址，获取歌词数组
 -(void)loadLyricWith:(NSString *)lyricStr;
 /**
  *  根据播放时间获取到该播放的歌词的索引
