@@ -36,6 +36,8 @@
 @property (strong, nonatomic) IBOutlet UIImageView *img4PicBackground;
 @property (strong, nonatomic) IBOutlet UIButton *cellTextColor;
 @property (strong, nonatomic) IBOutlet UIButton *cellSelectColor;
+@property (strong, nonatomic) IBOutlet UIButton *prevButton;
+@property (strong, nonatomic) IBOutlet UIButton *nextButton;
 #pragma mark --- 控制事件
 - (IBAction)action4Prev:(UIButton *)sender;
 - (IBAction)action4PlayOrPause:(UIButton *)sender;
@@ -71,6 +73,9 @@ static PlayingViewController *playingVC = nil;
     }
     _currentIndex = _index;
     [self startPlay];
+    // 后台
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    [self becomeFirstResponder];
 }
 
 -(void)startPlay{
@@ -132,6 +137,8 @@ static int i = 0;
 #pragma mark --- PlayerManagerDelegate
 // 播放器播放结束，播放下一首
 -(void)playerDidPlayEnd{
+    [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
+    [self resignFirstResponder];
     if ([self.playStyle.imageView.image isEqual:[UIImage imageNamed:@"循环播放"]]) {
         [self action4Next:nil];
     }if([self.playStyle.imageView.image isEqual:[UIImage imageNamed:@"单曲循环"]]){
@@ -297,6 +304,51 @@ static NSInteger click2 = 1;
     NSTimeInterval time = [[LyricManager sharedLyricManager].allLyric[indexPath.row] time];
     [[PlayerManager sharedPlayerManager] seekToTime:time];
     self.slider4Time.value = time;
+}
+
+#pragma mark --- playBackground
+
+- (void) viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
+    [self resignFirstResponder];
+}
+
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+//重写父类方法，接受外部事件的处理
+- (void) remoteControlReceivedWithEvent: (UIEvent *) receivedEvent {
+    if (receivedEvent.type == UIEventTypeRemoteControl) {
+        
+        switch (receivedEvent.subtype) {
+                
+            case UIEventSubtypeRemoteControlTogglePlayPause:
+                [self action4PlayOrPause:self.playOrPause];
+                break;
+                
+            case UIEventSubtypeRemoteControlPreviousTrack:
+                [self action4Prev:self.prevButton];
+                break;
+                
+            case UIEventSubtypeRemoteControlNextTrack:
+                [self action4Next:self.nextButton];
+                break;
+                
+            case UIEventSubtypeRemoteControlPlay:
+                [self action4PlayOrPause:self.playOrPause];
+                break;
+                
+            case UIEventSubtypeRemoteControlPause:
+                [self action4PlayOrPause:self.playOrPause];
+                break;
+                
+            default:
+                break;
+        }
+    }
 }
 
 

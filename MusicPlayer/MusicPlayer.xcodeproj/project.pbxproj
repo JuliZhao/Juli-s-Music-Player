@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C24B08801BF3740700FFDA92 /* dashu.png in Resources */ = {isa = PBXBuildFile; fileRef = C24B087F1BF3740700FFDA92 /* dashu.png */; settings = {ASSET_TAGS = (); }; };
+		C24B08801BF3740700FFDA92 /* dashu.png in Resources */ = {isa = PBXBuildFile; fileRef = C24B087F1BF3740700FFDA92 /* dashu.png */; };
 		C299685A1BED8A720065E24F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C29968591BED8A720065E24F /* main.m */; };
 		C29968631BED8A720065E24F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29968611BED8A720065E24F /* Main.storyboard */; };
 		C29968651BED8A720065E24F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C29968641BED8A720065E24F /* Assets.xcassets */; };
@@ -36,20 +36,20 @@
 		C29968CB1BEDE38A0065E24F /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C29968B91BEDE38A0065E24F /* UIImageView+HighlightedWebCache.m */; };
 		C29968CC1BEDE38A0065E24F /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C29968BB1BEDE38A0065E24F /* UIImageView+WebCache.m */; };
 		C29968CD1BEDE38A0065E24F /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C29968BD1BEDE38A0065E24F /* UIView+WebCacheOperation.m */; };
-		C29B78541BF1E47000229BCB /* 上一首.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B784A1BF1E47000229BCB /* 上一首.png */; settings = {ASSET_TAGS = (); }; };
-		C29B78551BF1E47000229BCB /* 下一首.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B784B1BF1E47000229BCB /* 下一首.png */; settings = {ASSET_TAGS = (); }; };
-		C29B78561BF1E47000229BCB /* 列表页面.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B784C1BF1E47000229BCB /* 列表页面.png */; settings = {ASSET_TAGS = (); }; };
-		C29B78571BF1E47000229BCB /* 单曲循环.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B784D1BF1E47000229BCB /* 单曲循环.png */; settings = {ASSET_TAGS = (); }; };
-		C29B78581BF1E47000229BCB /* 循环播放.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B784E1BF1E47000229BCB /* 循环播放.png */; settings = {ASSET_TAGS = (); }; };
-		C29B78591BF1E47000229BCB /* 播放.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B784F1BF1E47000229BCB /* 播放.png */; settings = {ASSET_TAGS = (); }; };
-		C29B785A1BF1E47000229BCB /* 播放页面.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B78501BF1E47000229BCB /* 播放页面.png */; settings = {ASSET_TAGS = (); }; };
-		C29B785B1BF1E47000229BCB /* 暂停.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B78511BF1E47000229BCB /* 暂停.png */; settings = {ASSET_TAGS = (); }; };
-		C29B785C1BF1E47000229BCB /* 随机播放.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B78521BF1E47000229BCB /* 随机播放.png */; settings = {ASSET_TAGS = (); }; };
+		C29B78541BF1E47000229BCB /* 上一首.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B784A1BF1E47000229BCB /* 上一首.png */; };
+		C29B78551BF1E47000229BCB /* 下一首.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B784B1BF1E47000229BCB /* 下一首.png */; };
+		C29B78561BF1E47000229BCB /* 列表页面.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B784C1BF1E47000229BCB /* 列表页面.png */; };
+		C29B78571BF1E47000229BCB /* 单曲循环.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B784D1BF1E47000229BCB /* 单曲循环.png */; };
+		C29B78581BF1E47000229BCB /* 循环播放.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B784E1BF1E47000229BCB /* 循环播放.png */; };
+		C29B78591BF1E47000229BCB /* 播放.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B784F1BF1E47000229BCB /* 播放.png */; };
+		C29B785A1BF1E47000229BCB /* 播放页面.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B78501BF1E47000229BCB /* 播放页面.png */; };
+		C29B785B1BF1E47000229BCB /* 暂停.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B78511BF1E47000229BCB /* 暂停.png */; };
+		C29B785C1BF1E47000229BCB /* 随机播放.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B78521BF1E47000229BCB /* 随机播放.png */; };
 		C29B78641BF22B7D00229BCB /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C29B78631BF22B7D00229BCB /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		C29B78661BF22F2B00229BCB /* 搜索.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B78651BF22F2B00229BCB /* 搜索.png */; settings = {ASSET_TAGS = (); }; };
+		C29B78661BF22F2B00229BCB /* 搜索.png in Resources */ = {isa = PBXBuildFile; fileRef = C29B78651BF22F2B00229BCB /* 搜索.png */; };
 		C2CBC41B1BF1808D000D317F /* LyricModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CBC41A1BF1808D000D317F /* LyricModel.m */; };
 		C2CBC41E1BF181CB000D317F /* LyricManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CBC41D1BF181CB000D317F /* LyricManager.m */; };
-		C2D09DFE1BF3350D008C00EF /* SY.PNG in Resources */ = {isa = PBXBuildFile; fileRef = C2D09DFD1BF3350D008C00EF /* SY.PNG */; settings = {ASSET_TAGS = (); }; };
+		C2D09DFE1BF3350D008C00EF /* SY.PNG in Resources */ = {isa = PBXBuildFile; fileRef = C2D09DFD1BF3350D008C00EF /* SY.PNG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -605,7 +605,7 @@
 				INFOPLIST_FILE = MusicPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zy.com.MusicPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = zy.com.MusicPlayer.haha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -619,7 +619,7 @@
 				INFOPLIST_FILE = MusicPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zy.com.MusicPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = zy.com.MusicPlayer.haha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

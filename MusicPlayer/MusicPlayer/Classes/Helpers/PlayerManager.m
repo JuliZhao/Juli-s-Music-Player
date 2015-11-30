@@ -9,6 +9,7 @@
 #import "PlayerManager.h"
 #import <AVFoundation/AVFoundation.h>
 #import "PlayingViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface PlayerManager ()
 @property (nonatomic, strong) AVPlayer *player;
@@ -18,6 +19,21 @@
 @implementation PlayerManager
 
 static PlayerManager *playerManager = nil;
+
+//+ (void)initialize{
+//    // 设置后台播放
+//    [self sutupForBackgroundPlay];
+//}
+
+// 设置后台播放
++ (void)sutupForBackgroundPlay{
+    // 后台播放三步曲之第三步，设置 音频会话类型
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    // 类型是:播放和录音
+    [session setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+    // 而且要激活 音频会话
+    [session setActive:YES error:nil];
+}
 
 +(PlayerManager *)sharedPlayerManager{
     static dispatch_once_t onceToken;

@@ -76,7 +76,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFF-dB-210" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-841" y="353"/>
+            <point key="canvasLocation" x="-1297" y="357"/>
         </scene>
         <!--Playing View Controller-->
         <scene sceneID="zWJ-mH-XWi">
@@ -346,8 +346,10 @@
                         <outlet property="img4PicBackground" destination="BWi-hi-CSJ" id="Bc8-lL-Xmy"/>
                         <outlet property="label4LastTime" destination="PGJ-S0-ZWb" id="dp1-oa-Hli"/>
                         <outlet property="label4PlayedTime" destination="bPA-eu-NkL" id="5sf-f1-dri"/>
+                        <outlet property="nextButton" destination="rwa-Pj-wyQ" id="iTj-hB-dlw"/>
                         <outlet property="playOrPause" destination="z8k-Ss-ru8" id="KUz-wf-H0z"/>
                         <outlet property="playStyle" destination="3dB-bX-PS4" id="JVv-uV-kpV"/>
+                        <outlet property="prevButton" destination="yMU-wL-Y0j" id="TXv-fN-gR6"/>
                         <outlet property="singerName" destination="yVn-ey-uc4" id="ikh-oF-RGt"/>
                         <outlet property="slider4Time" destination="Yxb-7v-pKE" id="mam-w9-biU"/>
                         <outlet property="slider4Volume" destination="BS5-JW-yID" id="YE8-TB-BtY"/>
@@ -357,7 +359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKF-CI-mn5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-821" y="327"/>
+            <point key="canvasLocation" x="-845" y="193"/>
         </scene>
     </scenes>
     <resources>

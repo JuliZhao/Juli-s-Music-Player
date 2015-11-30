@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 #import <AVFoundation/AVFoundation.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import "PlayingViewController.h"
+#import "DataManager.h"
+#import "Music.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +23,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+//    NSError *setCategoryErr = nil;
+//    NSError *activationErr  = nil;
+//    [[AVAudioSession sharedInstance]
+//     setCategory: AVAudioSessionCategoryPlayback
+//     error: &setCategoryErr];
+//    [[AVAudioSession sharedInstance]
+//     setActive: YES
+//     error: &activationErr];
     [NSThread sleepForTimeInterval:2.0];
     return YES;
 }
@@ -31,9 +43,28 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    PlayingViewController *pVC = [PlayingViewController sharedPlayingVC];
+    NSInteger currentMusic = pVC.index;
+    
+    Music *music = [DataManager sharedManager].musicArray[currentMusic];
+    
+    NSMutableDictionary *info = [NSMutableDictionary dictionary];
+    info[MPMediaItemPropertyAlbumTitle] = @"中文十大金曲";
+    info[MPMediaItemPropertyTitle] = music.name;
+    info[MPMediaItemPropertyArtist] = music.singer;
+    [MPNowPlayingInfoCenter defaultCenter].nowPlayingInfo = info;
+    
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    // 类型是:播放和录音
+    [session setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+    // 而且要激活 音频会话
+    [session setActive:YES error:nil];
+    [[UIApplication sharedApplication] backgroundTimeRemaining];
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     [self becomeFirstResponder];
 }
+
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
